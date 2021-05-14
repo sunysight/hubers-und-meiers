@@ -8,3 +8,47 @@ div {
   border: 1px solid black;
   margin: 5px;
 }
+
+/*Spezifität: (0)10*/
+.huber {
+  background-color: pink;
+}
+
+/*Spezifität: (0)10*/
+.meier {
+  background-color: blue;
+}
+
+/*unten schlägt oben*/
+.huber {
+  background-color: lightblue;
+}
+
+/*Spezifität: 100 - Spezifikation gewinnt aufgrund Punkte*/
+#lisa {
+  background-color: yellow;
+}
+
+/* Spezifität: (0)11, alle divs in einem Element mit der Klasse Huber*/
+.huber div {
+  background-color: white;
+}
+
+/* ein Element mit der ID "lisa" und der Klasse "meier"*/
+#lisa.meier {
+  background-color: chartreuse;
+}
+
+div#lisa.meier {
+  background-color: darkblue;
+}
+/* Spezifität: 112, Element Element Id Class)*/
+
+div div#lisa.meier {
+  background-color: black;
+}
+
+#sepp,
+#luis {
+  background-color: chocolate;
+}
